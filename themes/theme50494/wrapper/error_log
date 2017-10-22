@@ -1,0 +1,4 @@
+[12-Feb-2016 01:49:37 UTC] PHP Fatal error:  Call to undefined function dynamic_sidebar() in /home/dekmarwebmaster/public_html/wp-content/themes/theme50494/wrapper/wrapper-header.php on line 7
+[12-Feb-2016 01:49:38 UTC] PHP Fatal error:  Call to undefined function get_template_part() in /home/dekmarwebmaster/public_html/wp-content/themes/theme50494/wrapper/wrapper-footer.php on line 10
+[18-Feb-2016 10:53:30 UTC] PHP Fatal error:  Call to undefined function dynamic_sidebar() in /home/dekmarwebmaster/public_html/wp-content/themes/theme50494/wrapper/wrapper-header.php on line 7
+[18-Feb-2016 17:16:01 UTC] PHP Fatal error:  Call to undefined function get_template_part() in /home/dekmarwebmaster/public_html/wp-content/themes/theme50494/wrapper/wrapper-footer.php on line 10

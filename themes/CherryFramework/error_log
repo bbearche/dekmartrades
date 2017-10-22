@@ -1,0 +1,4 @@
+[12-Nov-2015 11:39:52 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/dekmarwebmaster/public_html/wp-content/themes/CherryFramework/index.php on line 2
+[18-Nov-2015 17:10:31 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/dekmarwebmaster/public_html/wp-content/themes/CherryFramework/index.php on line 2
+[12-Feb-2016 01:42:57 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/dekmarwebmaster/public_html/wp-content/themes/CherryFramework/index.php on line 2
+[15-Feb-2016 06:51:48 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/dekmarwebmaster/public_html/wp-content/themes/CherryFramework/index.php on line 2

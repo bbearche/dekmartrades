@@ -1,0 +1,4 @@
+[12-Feb-2016 01:55:17 UTC] PHP Fatal error:  Class 'WP_Widget_Recent_Comments' not found in /home/dekmarwebmaster/public_html/wp-content/themes/theme50494/includes/widgets/my-comment-widget.php on line 2
+[12-Feb-2016 01:59:40 UTC] PHP Fatal error:  Class 'WP_Widget' not found in /home/dekmarwebmaster/public_html/wp-content/themes/theme50494/includes/widgets/my-recent-posts.php on line 3
+[18-Feb-2016 17:07:30 UTC] PHP Fatal error:  Class 'WP_Widget' not found in /home/dekmarwebmaster/public_html/wp-content/themes/theme50494/includes/widgets/my-recent-posts.php on line 3
+[19-Feb-2016 20:26:44 UTC] PHP Fatal error:  Class 'WP_Widget_Recent_Comments' not found in /home/dekmarwebmaster/public_html/wp-content/themes/theme50494/includes/widgets/my-comment-widget.php on line 2

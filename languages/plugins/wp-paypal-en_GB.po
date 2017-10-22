@@ -1,0 +1,188 @@
+# Translation of Development (trunk) in English (UK)
+# This file is distributed under the same license as the Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2015-12-15 13:42:52+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/1.0-alpha-1100\n"
+"Project-Id-Version: Development (trunk)\n"
+
+#: main.php:224 main.php:275
+msgid "Save Changes"
+msgstr "Save Changes"
+
+#: main.php:131 main.php:138
+msgid "Settings"
+msgstr "Settings"
+
+#: wp-paypal-order.php:45
+msgid "First Name"
+msgstr "First Name"
+
+#: wp-paypal-order.php:46
+msgid "Last Name"
+msgstr "Last Name"
+
+#: main.php:139
+msgid "Debug"
+msgstr "Debug"
+
+#. #-#-#-#-#  tmp-wp-paypal.pot (WP PayPal 1.0.4)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: main.php:147 wp-paypal-order.php:7
+msgid "WP PayPal"
+msgstr "WP PayPal"
+
+#: main.php:149
+msgid "Please visit the <a target=\"_blank\" href=\"%s\">WP PayPal</a> documentation page for usage instructions."
+msgstr "Please visit the <a target=\"_blank\" href=\"%s\">WP PayPal</a> documentation page for usage instructions."
+
+#: main.php:188 main.php:242
+msgid "Settings Saved"
+msgstr "Settings Saved"
+
+#: main.php:201
+msgid "Enable Test Mode"
+msgstr "Enable Test Mode"
+
+#: main.php:204
+msgid "Check this option if you want to enable PayPal sandbox for testing"
+msgstr "Check this option if you want to enable PayPal sandbox for testing"
+
+#: main.php:209
+msgid "PayPal Email"
+msgstr "PayPal Email"
+
+#: main.php:211
+msgid "Your PayPal email address"
+msgstr "Your PayPal email address"
+
+#: main.php:215
+msgid "Currency Code"
+msgstr "Currency Code"
+
+#: main.php:217
+msgid "The currency of the payment"
+msgstr "The currency of the payment"
+
+#: main.php:217
+msgid "example"
+msgstr "example"
+
+#: main.php:232
+msgid "WP PayPal Debug Log"
+msgstr "WP PayPal Debug Log"
+
+#: main.php:250
+msgid "Debug log file has been reset"
+msgstr "Debug log file has been reset"
+
+#: main.php:252
+msgid "Debug log file could not be reset"
+msgstr "Debug log file could not be reset"
+
+#: main.php:265
+msgid "Enable Debug"
+msgstr "Enable Debug"
+
+#: main.php:268
+msgid "Check this option if you want to enable debug"
+msgstr "Check this option if you want to enable debug"
+
+#: main.php:279
+msgid "Reset Log"
+msgstr "Reset Log"
+
+#: wp-paypal-order.php:5
+msgid "Orders"
+msgstr "Orders"
+
+#: wp-paypal-order.php:6 wp-paypal-order.php:8 wp-paypal-order.php:43
+msgid "Order"
+msgstr "Order"
+
+#: wp-paypal-order.php:9
+msgid "Add New"
+msgstr "Add New"
+
+#: wp-paypal-order.php:10
+msgid "Add New Order"
+msgstr "Add New Order"
+
+#: wp-paypal-order.php:11
+msgid "New Order"
+msgstr "New Order"
+
+#: wp-paypal-order.php:12
+msgid "Edit Order"
+msgstr "Edit Order"
+
+#: wp-paypal-order.php:13
+msgid "View Order"
+msgstr "View Order"
+
+#: wp-paypal-order.php:14
+msgid "All Orders"
+msgstr "All Orders"
+
+#: wp-paypal-order.php:15
+msgid "Search Orders"
+msgstr "Search Orders"
+
+#: wp-paypal-order.php:16
+msgid "Parent Orders:"
+msgstr "Parent Orders:"
+
+#: wp-paypal-order.php:17
+msgid "No Orders found."
+msgstr "No Orders found."
+
+#: wp-paypal-order.php:44 wp-paypal-order.php:75
+msgid "Transaction ID"
+msgstr "Transaction ID"
+
+#: wp-paypal-order.php:47
+msgid "Total"
+msgstr "Total"
+
+#: wp-paypal-order.php:48 wp-paypal-order.php:65
+msgid "Payment Status"
+msgstr "Payment Status"
+
+#: wp-paypal-order.php:49
+msgid "Date"
+msgstr "Date"
+
+#: wp-paypal-order.php:70
+msgid "Payment Type"
+msgstr "Payment Type"
+
+#. #-#-#-#-#  tmp-wp-paypal.pot (WP PayPal 1.0.4)  #-#-#-#-#
+#. Plugin URI of the plugin/theme
+#. #-#-#-#-#  tmp-wp-paypal.pot (WP PayPal 1.0.4)  #-#-#-#-#
+#. Author URI of the plugin/theme
+msgid "http://wphowto.net/"
+msgstr "http://wphowto.net/"
+
+#. Description of the plugin/theme
+msgid "Easily accept PayPal payments in WordPress"
+msgstr "Easily accept PayPal payments in WordPress"
+
+#. Author of the plugin/theme
+msgid "naa986"
+msgstr "naa986"
+
+#: main.php:145
+msgid "General"
+msgstr "General"
+
+#: wp-paypal-order.php:18
+msgid "No orders found in Trash."
+msgstr "No orders found in Bin."
+
+#: main.php:75
+msgid "WP PayPal Debug log file is not writable. Please check to make sure that it has the correct file permission (ideally 644). Otherwise the plugin will not be able to write to the log file. The log file (log.txt) can be found in the root directory of the plugin - "
+msgstr "WP PayPal Debug log file is not writable. Please check to make sure that it has the correct file permission (ideally 644). Otherwise the plugin will not be able to write to the log file. The log file (log.txt) can be found in the root directory of the plugin - "

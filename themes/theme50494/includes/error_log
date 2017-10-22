@@ -1,0 +1,9 @@
+[12-Feb-2016 01:49:26 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/dekmarwebmaster/public_html/wp-content/themes/theme50494/includes/custom-js.php on line 2
+[12-Feb-2016 01:49:28 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/dekmarwebmaster/public_html/wp-content/themes/theme50494/includes/theme-init.php on line 2
+[12-Feb-2016 01:49:28 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/dekmarwebmaster/public_html/wp-content/themes/theme50494/includes/sidebar-init.php on line 60
+[12-Feb-2016 01:53:38 UTC] PHP Fatal error:  Call to undefined function get_option() in /home/dekmarwebmaster/public_html/wp-content/themes/theme50494/includes/parallaxSlider.php on line 5
+[12-Feb-2016 01:53:45 UTC] PHP Fatal error:  Call to undefined function load_child_theme_textdomain() in /home/dekmarwebmaster/public_html/wp-content/themes/theme50494/includes/custom-function.php on line 3
+[12-Feb-2016 01:53:51 UTC] PHP Warning:  require_once(PARENT_DIR/includes/class-tgm-plugin-activation.php): failed to open stream: No such file or directory in /home/dekmarwebmaster/public_html/wp-content/themes/theme50494/includes/register-plugins.php on line 22
+[12-Feb-2016 01:53:51 UTC] PHP Fatal error:  require_once(): Failed opening required 'PARENT_DIR/includes/class-tgm-plugin-activation.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dekmarwebmaster/public_html/wp-content/themes/theme50494/includes/register-plugins.php on line 22
+[19-Feb-2016 08:45:37 UTC] PHP Fatal error:  Call to undefined function load_child_theme_textdomain() in /home/dekmarwebmaster/public_html/wp-content/themes/theme50494/includes/custom-function.php on line 3
+[19-Feb-2016 10:54:12 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/dekmarwebmaster/public_html/wp-content/themes/theme50494/includes/custom-js.php on line 2
