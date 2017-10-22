@@ -1,0 +1,391 @@
+select.dzs-style-me {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.3s;
+  -moz-transition-property: opacity;
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-property: opacity;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-property: opacity;
+  -o-transition-duration: 0.3s;
+  -ms-transition-property: opacity;
+  -ms-transition-duration: 0.3s;
+  -ms-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in; }
+
+select.dzs-style-me > li {
+  display: none; }
+
+ul.dzs-style-me > li {
+  display: none; }
+
+.dzs-style-me-feeder {
+  display: none; }
+
+.dzs-select-wrapper {
+  position: relative;
+  color: #444444;
+  width: 500px;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+  height: auto;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.3s;
+  -moz-transition-property: opacity;
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-property: opacity;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-property: opacity;
+  -o-transition-duration: 0.3s;
+  -ms-transition-property: opacity;
+  -ms-transition-duration: 0.3s;
+  -ms-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  .dzs-select-wrapper * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
+.dzs-select-wrapper.init-readyall {
+  opacity: 1; }
+
+.dzs-select-wrapper.autowidth {
+  width: auto;
+  max-width: none; }
+
+.dzs-select-wrapper .dzs-select-wrapper-head {
+  position: relative;
+  height: 34px;
+  color: #444444;
+  border: 1px solid #bbbbbb;
+  cursor: pointer;
+  background-color: #d6d0bc;
+  width: 100%;
+  display: block;
+  vertical-align: top; }
+
+.dzs-select-wrapper .the-text {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  line-height: 1; }
+
+.dzs-select-wrapper select {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 30px;
+  font-size: 13px;
+  display: inline-block;
+  left: 0;
+  line-height: 30px;
+  vertical-align: middle;
+  cursor: pointer; }
+
+.dzs-select-wrapper .select-option {
+  cursor: pointer; }
+
+.dzs-select-wrapper[class*="opener-"] select {
+  display: none; }
+
+.dzs-select-wrapper.skin-beige .dzs-select-wrapper-head:after {
+  position: absolute;
+  content: '\f107';
+  font-family: FontAwesome, serif;
+  color: #777777;
+  font-size: 12px;
+  right: 10px;
+  line-height: 1;
+  top: 50%;
+  margin-top: -5px;
+  pointer-events: none;
+  transform: rotate(0deg);
+  transition-property: all;
+  transition-duration: 0.3s;
+  -moz-transition-property: all;
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-property: all;
+  -o-transition-duration: 0.3s;
+  -ms-transition-property: all;
+  -ms-transition-duration: 0.3s;
+  -ms-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in; }
+
+.dzs-select-wrapper.select-focused.skin-beige:after {
+  transform: rotate(90deg); }
+
+.dzs-select-wrapper.skin-charm .dzs-select-wrapper-head {
+  background-color: #eeeeee;
+  border: 1px solid #cdcdcd;
+  font-weight: bold; }
+  .dzs-select-wrapper.skin-charm .dzs-select-wrapper-head > .plus-sign {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%); }
+    .dzs-select-wrapper.skin-charm .dzs-select-wrapper-head > .plus-sign .rect1 {
+      transform-origin: center center;
+      transform: scaleY(1);
+      transition-property: all;
+      transition-duration: 0.3s;
+      -moz-transition-property: all;
+      -moz-transition-duration: 0.3s;
+      -webkit-transition-property: all;
+      -webkit-transition-duration: 0.3s;
+      -o-transition-property: all;
+      -o-transition-duration: 0.3s;
+      -ms-transition-property: all;
+      -ms-transition-duration: 0.3s;
+      -ms-transition-timing-function: ease-out;
+      -webkit-transition-timing-function: ease-out;
+      -moz-transition-timing-function: ease-out;
+      -o-transition-timing-function: ease-out;
+      transition-timing-function: ease-out; }
+
+.dzs-select-wrapper.skin-charm.active-animation .dzs-select-wrapper-head > .plus-sign .rect1 {
+  transform: scaleY(0); }
+
+.dzs-select-wrapper.skin-justvisible .dzs-select-wrapper-head {
+  background-color: transparent;
+  border-width: 0px; }
+
+.dzs-select-wrapper.opener-bigoptions .opener-bigoptions-wrap {
+  border: 1px solid #bbbbbb;
+  background-color: #d6d0bc;
+  /*color: #FFFFFF;*/
+  padding: 10px 0 0px 10px;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  position: relative;
+  margin-bottom: 0px;
+  top: 0px;
+  transform: scale(0);
+  transform-origin: center bottom;
+  transition-property: transform, margin, top;
+  transition-duration: 0.3s;
+  -moz-transition-property: transform, margin, top;
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-property: transform, margin, top;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-property: transform, margin, top;
+  -o-transition-duration: 0.3s;
+  -ms-transition-property: transform, margin, top;
+  -ms-transition-duration: 0.3s;
+  -ms-transition-timing-function: ease-out;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
+.dzs-select-wrapper.opener-bigoptions .bigoption {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 150px;
+  min-height: 150px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: relative; }
+  .dzs-select-wrapper.opener-bigoptions .bigoption > .center-it {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%); }
+
+.dzs-select-wrapper.active .opener-bigoptions-wrap {
+  opacity: 1;
+  visibility: visible;
+  /*transform: scale(1);*/ }
+
+.dzs-select-wrapper.active-animation .opener-bigoptions-wrap {
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+  margin-bottom: 15px;
+  top: 15px; }
+
+.dzs-select-wrapper.opener-list .search-field {
+  width: calc(100% - 10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 5px 5px;
+  padding: 5px 10px; }
+.dzs-select-wrapper.opener-list .opener-list-wrap {
+  max-height: 200px;
+  overflow: auto;
+  display: none;
+  border: 1px solid #ddd;
+  background-color: #ffffff;
+  border-top-width: 0; }
+  .dzs-select-wrapper.opener-list .opener-list-wrap > .search-field {
+    font-size: 13px; }
+  .dzs-select-wrapper.opener-list .opener-list-wrap > .opener-list > .bigoption {
+    padding: 10px 14px;
+    line-height: 1;
+    background-color: #ffffff;
+    font-size: 13px; }
+  .dzs-select-wrapper.opener-list .opener-list-wrap > .opener-list > .bigoption:hover {
+    background-color: #eeeeee; }
+
+.dzs-select-wrapper.opener-list.active-animation .opener-list-wrap, .dzs-select-wrapper.opener-list.active .opener-list-wrap {
+  display: block; }
+
+.dzs-select-wrapper.opener-listbuttons {
+  width: 100%; }
+  .dzs-select-wrapper.opener-listbuttons .dzs-select-wrapper-head {
+    display: none; }
+  .dzs-select-wrapper.opener-listbuttons .bigoption {
+    display: inline-block;
+    margin-right: 0;
+    color: #fff; }
+  .dzs-select-wrapper.opener-listbuttons .bigoption.active {
+    background-color: #20dbfc; }
+
+.dzs-select-wrapper.opener-listbuttons.skin-nova {
+  font-size: 0; }
+  .dzs-select-wrapper.opener-listbuttons.skin-nova .bigoption.active {
+    background-color: #2d6987;
+    color: #ffffff; }
+  .dzs-select-wrapper.opener-listbuttons.skin-nova .bigoption {
+    font-size: 13px;
+    background-color: #FAFAFA;
+    color: #222222;
+    line-height: 1;
+    padding: 10px;
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    font-size: 13px;
+    transition-property: color, background;
+    transition-duration: 0.3s;
+    -moz-transition-property: color, background;
+    -moz-transition-duration: 0.3s;
+    -webkit-transition-property: color, background;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-property: color, background;
+    -o-transition-duration: 0.3s;
+    -ms-transition-property: color, background;
+    -ms-transition-duration: 0.3s;
+    -ms-transition-timing-function: ease-in;
+    -webkit-transition-timing-function: ease-in;
+    -moz-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    transition-timing-function: ease-in; }
+  .dzs-select-wrapper.opener-listbuttons.skin-nova .bigoption:first-child {
+    border-radius: 5px 0 0 5px; }
+  .dzs-select-wrapper.opener-listbuttons.skin-nova .bigoption:last-child {
+    border-radius: 0 5px 5px 0;
+    border-right: 0; }
+
+.dzs-select-wrapper.opener-listbuttons.skin-checkbox .bigoption {
+  display: inline-block;
+  margin-right: 10px;
+  color: #fff;
+  padding: 3px 3px; }
+.dzs-select-wrapper.opener-listbuttons.skin-checkbox .bigoption.active {
+  position: relative;
+  background-color: transparent; }
+.dzs-select-wrapper.opener-listbuttons.skin-checkbox .bigoption.active:before {
+  background-color: #ffffff;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: auto;
+  bottom: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%; }
+.dzs-select-wrapper.opener-listbuttons.skin-checkbox .bigoption.active:after {
+  background-color: transparent;
+  content: '\2713';
+  font-size: 12px;
+  color: #111;
+  line-height: 1;
+  position: absolute;
+  right: 0;
+  top: auto;
+  bottom: 3px; }
+
+.dzs-select-wrapper.opener-radio .dzs-select-wrapper-head {
+  display: none; }
+.dzs-select-wrapper.opener-radio .bigoption {
+  display: inline-block;
+  margin-right: 15px;
+  color: #fff;
+  position: relative;
+  line-height: 1;
+  font-size: 14px; }
+  .dzs-select-wrapper.opener-radio .bigoption .small-bubble {
+    width: 12px;
+    height: 12px;
+    margin-left: 10px;
+    background-color: #ffffff;
+    display: inline-block;
+    border-radius: 50%; }
+.dzs-select-wrapper.opener-radio .bigoption.active:after {
+  content: '\2713';
+  color: #111;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.dzs-checkbox-selector {
+  font-size: 0; }
+  .dzs-checkbox-selector > label {
+    cursor: pointer;
+    display: inline-block; }
+    .dzs-checkbox-selector > label > input[type=checkbox] {
+      display: none; }
+
+.dzs-checkbox-selector.skin-nova > label input:checked + .the-label {
+  background-color: #2d6987;
+  color: #ffffff; }
+.dzs-checkbox-selector.skin-nova > label .the-label {
+  font-size: 13px;
+  background-color: #FAFAFA;
+  color: #222222;
+  line-height: 1;
+  padding: 10px;
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  transition-property: color, background;
+  transition-duration: 0.3s;
+  -moz-transition-property: color, background;
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-property: color, background;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-property: color, background;
+  -o-transition-duration: 0.3s;
+  -ms-transition-property: color, background;
+  -ms-transition-duration: 0.3s;
+  -ms-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in; }
+.dzs-checkbox-selector.skin-nova > label:first-child .the-label {
+  border-radius: 5px 0 0 5px; }
+.dzs-checkbox-selector.skin-nova > label:last-child .the-label {
+  border-radius: 0 5px 5px 0; }
+
+/*# sourceMappingURL=dzsselector.css.map */

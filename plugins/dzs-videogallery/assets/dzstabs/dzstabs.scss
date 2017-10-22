@@ -1,0 +1,815 @@
+
+@mixin css_animation($transition-property, $transition-duration, $transition-timing) {
+transition-property: $transition-property;transition-duration: $transition-duration;transition-timing-function: $transition-timing;-moz-transition-property:$transition-property;-moz-transition-duration: $transition-duration;-moz-transition-timing-function:$transition-timing;-webkit-transition-property:$transition-property;-webkit-transition-duration: $transition-duration;-webkit-transition-timing-function:$transition-timing;-o-transition-property:$transition-property;-o-transition-duration: $transition-duration;-o-transition-timing-function:$transition-timing;-ms-transition-property:$transition-property;
+-ms-transition-duration: $transition-duration;-ms-transition-timing-function:$transition-timing;
+}
+@mixin boxsizing() {
+-moz-box-sizing:    border-box;   -webkit-box-sizing: border-box;    box-sizing:        border-box;
+}
+
+
+$menu_bg: #fff;
+$menu_inactive_bg: #f7f7f7;
+$border_color: rgba(0,0,0,0.3);
+$border-width:2px;
+$arrow-size:5px;
+$transition-property: all;
+$transition-duration: 0.3s;
+$transition-timing: ease-out;
+
+$cssselector : ".with-tooltip span:first-child";
+$sel_tooltip : ".dzstooltip";
+$sel_mainclass : ".dzs-tabs";
+
+/* --- functional styling */
+
+#{$sel_mainclass}{
+    position:relative;
+    width:100%;
+  @include boxsizing();
+    }
+#{$sel_mainclass} * {
+  @include boxsizing();
+
+}
+#{$sel_mainclass}:after{
+  display: block;
+  clear:both;
+  content: " ";
+  width: 100%; height: 1px;
+}
+#{$sel_mainclass} .dzs-tab-tobe{
+    display:none;
+    }
+#{$sel_mainclass} .tabs-menu > div{
+    display:inline-block;
+  cursor: pointer;
+    }
+#{$sel_mainclass} .tabs-menu p{
+    margin:0;
+    }
+#{$sel_mainclass} .tabs-content{
+    display:block;
+    width:100%;
+    min-height:10px;
+    }
+#{$sel_mainclass}.iphone-size .dzs-tab-tobe{
+    display:block;
+    }
+#{$sel_mainclass}.iphone-size .tabs-menu, .dzs-tabs.iphone-size .tabs-content{
+    display:none;
+    }
+
+#{$sel_mainclass}.iphone-size{
+    border:0;
+    }
+#{$sel_mainclass}{
+    position:relative;
+    width:100%;
+    }
+
+#{$sel_mainclass} p:empty{
+    display:none;
+    }
+
+
+#{$sel_mainclass}.tabs-left .tabs-menu > div, #{$sel_mainclass}.tabs-right .tabs-menu > div{
+  display:block;
+  width: 100%;
+}
+#{$sel_mainclass}.tabs-left .tabs-menu{
+  float:left;
+}
+#{$sel_mainclass}.tabs-right .tabs-menu{
+  float:right;
+}
+#{$sel_mainclass}.tabs-right .tabs-content, #{$sel_mainclass}.tabs-left .tabs-content{
+  overflow: hidden;
+  width: auto;
+}
+#{$sel_mainclass}.under-361 {
+
+  .tabs-menu{
+
+    float:none;
+    width: 100%;
+  }
+}
+
+
+.dzs-tabs.skin-default.under-361 {
+
+  .tabs-menu{
+
+    float:none;
+    width: 100%;
+    border-left: 1px solid rgba(0,0,0,0.3)
+  }
+}
+
+/* --- estethic styling */
+
+#{$sel_mainclass}{
+    margin: 10px 0;
+    }
+
+
+
+
+#{$sel_mainclass}.iphone-size .tab-menu{
+    font-size:2em;
+    font-family:arial,serif;
+    }
+#{$sel_mainclass}.iphone-size .dzs-tab-tobe{
+    display:block;
+    margin-bottom:15px;
+    }
+
+
+#{$sel_mainclass}{
+
+    @include boxsizing();
+    }
+    #{$sel_mainclass} .tabs-menu{
+
+    position:relative;
+    z-index:6;
+    }
+#{$sel_mainclass} .tabs-menu > div{
+    display:inline-block;
+}
+#{$sel_mainclass}.tabs-bottom .tabs-menu > div.active{
+    border-bottom:inherit;
+    }
+#{$sel_mainclass}.tabs-bottom .tabs-content{
+    top:0px;
+    }
+#{$sel_mainclass}.tabs-bottom {
+    border-bottom:0;
+    border-top:1px solid $border_color;
+    }
+   #{$sel_mainclass}.touch  .tabs-menu > div > span:first-child{
+        display:none;
+        }
+#{$sel_mainclass} .tabs-content{
+    background: $menu_bg;
+    position:relative;
+    z-index:5;
+    top:-1px;
+    border-top:1px solid $border_color;
+    border-right:1px solid $border_color;
+    overflow:hidden;
+    width:100%;
+    @include boxsizing();
+        @include css_animation($transition-property, $transition-duration, $transition-timing);
+    }
+#{$sel_mainclass} .tabs-content .content-inner{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    @include boxsizing();
+    }
+#{$sel_mainclass} .tabs-content .content-inner > *{
+    position:absolute;
+    padding:10px 12px;
+    top:0;
+    left:0;
+    @include boxsizing();
+    }
+
+
+/* ==== skin-default */
+
+
+
+$menu_bg: #fff;
+$menu_inactive_bg: #f7f7f7;
+$border_color: rgba(0,0,0,0.3);
+$border-width:2px;
+$arrow-size:5px;
+$transition-property: all;
+$transition-duration: 0.3s;
+$transition-timing: ease-out;
+$sel_mainclass : ".dzs-tabs.skin-default";
+
+
+
+#{$sel_mainclass}{
+  border-left:1px solid $border_color;
+  border-bottom:1px solid $border_color;
+}
+
+#{$sel_mainclass} .tabs-menu > div{
+  padding: 5px 14px;
+  background: $menu_inactive_bg;
+  border-right:1px solid $border_color;
+  border-top:1px solid $border_color;
+  border-bottom:1px dotted $border_color;
+  cursor:pointer;
+
+  @include css_animation($transition-property, $transition-duration, $transition-timing);
+
+}
+
+
+
+#{$sel_mainclass} .tabs-menu > div.active{
+  background: $menu_bg;
+  border-bottom:1px solid $menu_bg;
+}
+#{$sel_mainclass} .tabs-menu > div:last-child{
+  border-right:1px solid $border_color;
+  border-bottom:0px solid $menu_bg;
+}
+
+
+
+#{$sel_mainclass}.tabs-bottom .tabs-menu > div{
+  border-top:0px solid $border_color;
+  border-bottom:1px solid $border_color;
+}
+
+
+#{$sel_mainclass}.tabs-left .tabs-content{
+  border: 1px solid $border_color;
+}
+
+#{$sel_mainclass}.tabs-left{
+  border-left:0px solid $border_color;
+  border-bottom:0px solid $border_color;
+}
+#{$sel_mainclass}.tabs-left .tabs-menu > div{
+  border-top:0px solid $border_color;
+  border-right:0px solid $border_color;
+
+}
+#{$sel_mainclass}.tabs-left .tabs-menu{
+  border-top:1px solid $border_color;
+  border-left:1px solid $border_color;
+  border-bottom:1px solid $border_color;
+
+}
+
+#{$sel_mainclass}.tabs-right .tabs-content{
+  border: 1px solid $border_color;
+}
+
+#{$sel_mainclass}.tabs-right{
+  border-left:0px solid $border_color;
+  border-bottom:0px solid $border_color;
+}
+#{$sel_mainclass}.tabs-right .tabs-menu > div{
+  border-top:0px solid $border_color;
+  border-right:0px solid $border_color;
+
+}
+#{$sel_mainclass}.tabs-right .tabs-menu{
+  border-top:1px solid $border_color;
+  border-right:1px solid $border_color;
+  border-bottom:1px solid $border_color;
+
+}
+
+
+    /* --- skin-dome */
+$menu_bg: #fff;
+$menu_inactive_bg: #f7f7f7;
+$border-width:2px;
+$arrow-size:5px;
+$transition-property: all;
+$transition-duration: 0.3s;
+$transition-timing: ease-out;
+
+$sel_mainclass : ".dzs-tabs.skin-dome";
+
+$menu_padding_hor: 20px;
+$menu_padding_ver: 20px;
+$border_color: #eee;
+$border_outer_color:rgba(255,255,255,0.4);
+$color_gradient_fin:rgba(248,248,248,1);
+
+    #{$sel_mainclass} {
+    border:0;
+        position:relative;
+
+    }
+    #{$sel_mainclass}.iphone-size {
+        left:0%;
+    }
+    #{$sel_mainclass} .tabs-menu{
+    text-align:center;
+        font-family: 'Quicksand', Helvetica, Arial, sans-serif;
+    }
+    #{$sel_mainclass} .tabs-menu > *{
+    border:0;
+        background:inherit;
+        padding:0;
+    }
+    #{$sel_mainclass} .tabs-menu > * > .titles{
+    padding:$menu_padding_hor $menu_padding_ver;
+    @include boxsizing();
+        }
+
+    #{$sel_mainclass} .tabs-menu > *.active{
+        border:0;
+        }
+    #{$sel_mainclass} .tabs-menu > *.active > .titles:before{
+        content:'';
+        position:absolute; display:block;
+        width:100%;
+        height:100%;
+        border-left:1px solid $border_color;
+        border-right:1px solid $border_outer_color;
+        margin-top: -$menu_padding_ver;
+        margin-left: -$menu_padding_hor;
+    @include boxsizing();
+}
+    #{$sel_mainclass} .tabs-menu > *.active > .titles{
+        border-left:1px solid $border_outer_color;
+        border-right:1px solid $border_color;
+        }
+    #{$sel_mainclass} .tabs-menu > *.active > .titles{
+        background: $color_gradient_fin;
+background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, $color_gradient_fin 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,$color_gradient_fin));
+background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,$color_gradient_fin 100%);
+background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,$color_gradient_fin 100%);
+background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,$color_gradient_fin 100%);
+background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,$color_gradient_fin 100%);
+    }
+    #{$sel_mainclass} .tabs-menu > *.active > .titles{
+
+        }
+
+
+    #{$sel_mainclass} .tabs-menu > *:last-child{
+    border-right:0;
+    }
+    #{$sel_mainclass} .tabs-menu .title{
+        font-size:1.5em;
+        line-height:0.4em;
+        }
+    #{$sel_mainclass} .tabs-menu .titles .subtitle{
+        margin-top:5px;
+        }
+    #{$sel_mainclass} .tabs-content{
+    border:0;
+        top:-2px;
+        text-align:center;
+        border-top:1px solid $border_outer_color;
+        border-bottom:1px solid $border_outer_color;
+        background-color:$color_gradient_fin;
+    }
+    #{$sel_mainclass} .tabs-content:before{
+        content:'';
+        position:absolute; display:block;
+        width:100%;
+        height:100%;
+        border-top:1px solid $border_color;
+        border-bottom:1px solid $border_color;
+    @include boxsizing();
+
+        }
+    #{$sel_mainclass} .tabs-content > .content-inner{
+        width:100%;
+        text-align: center;
+    }
+    #{$sel_mainclass} .tabs-content > .content-inner > *{
+        text-align: left;
+    }
+
+
+
+    /* --- skin-arrowbox */
+$menu_bg: #ccc;
+$menu_inactive_bg: #f7f7f7;
+$border-width:2px;
+$arrow-size:5px;
+$transition-property: all;
+$transition-duration: 0.3s;
+$transition-timing: ease-out;
+
+$cssselector : ".with-tooltip span:first-child";
+$sel_tooltip : ".dzstooltip";
+$sel_mainclass : ".dzs-tabs.skin-arrowbox";
+
+$menu_padding_hor: 20px;
+$menu_padding_ver: 20px;
+$border_color: #aaa;
+$border_outer_color:rgba(255,255,255,0.4);
+$color_gradient_fin:rgba(248,248,248,1);
+$color_shadow: #777;
+
+    #{$sel_mainclass} {
+    border:0;
+        position:relative;
+    }
+    #{$sel_mainclass}.iphone-size {
+        left:0%;
+    }
+    #{$sel_mainclass} .tabs-menu{
+    text-align:center;
+    }
+    #{$sel_mainclass} .tabs-menu > div{
+    border:0;
+        background: $menu_inactive_bg;
+        padding:10px;
+        border-radius:5px;
+        background: $menu_inactive_bg;
+        border: 1px solid $border_color;
+        border-bottom: 1px solid darken($border_color, 70%);
+        margin:10px 5px;
+    }
+
+    #{$sel_mainclass} .tabs-menu > div.active{
+        border: 1px solid $border_color;
+        border-bottom: 1px solid $border_color;
+        background: $menu_bg;
+        box-shadow: inset 0 1px 2px 0 $color_shadow;
+
+    }
+
+
+    #{$sel_mainclass} .tabs-content{
+    border:0;
+
+        text-align:center;
+        background-color: transparent;
+    }
+    #{$sel_mainclass} .tabs-content > .content-inner{
+        width:100%;
+        text-align: center;
+    }
+    #{$sel_mainclass} .tabs-content > .content-inner > *{
+        text-align: left;
+    }
+
+
+
+
+
+
+
+@mixin makearrow($cssselector, $direction, $arrow-size, $border-width, $main-color, $second-color, $inset:'off') {
+
+    $big-arrow-size: ($arrow-size+($border-width * 2) - ceil(0.6 * $border-width));
+/* -- arrows -> functional + estethic*/
+#{$cssselector}:after, #{$cssselector}:before, {
+	border: solid transparent;
+	position: absolute;
+	pointer-events: none;
+	content: " ";
+	height: 0;
+	width: 0;
+}
+
+
+#{$cssselector}:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-width: $arrow-size;
+}
+
+#{$cssselector}:before{
+	border-color: rgba(194, 225, 245, 0);
+	border-width: $big-arrow-size;
+}
+@if $direction=="bottom" {
+    #{$cssselector}:after, #{$cssselector}:before {
+            top: 100%;
+    }
+    #{$cssselector}:after {
+            border-top-color: $main-color;
+            left: 50%;
+            margin-left: -$arrow-size;
+    }
+    #{$cssselector}:before{
+            border-top-color: $second-color;
+            left: 50%;
+            margin-left: -$big-arrow-size;
+    }
+    @if $inset=="on" {
+
+    #{$cssselector}:after, #{$cssselector}:before {
+            top: -1px;
+    }
+    }
+}
+@if $direction=="top" {
+#{$cssselector}:after, #{$cssselector}:before {
+	bottom: 100%;
+}
+#{$cssselector}:after {
+	border-bottom-color: $main-color;
+	left: 50%;
+	margin-left: -$arrow-size;
+}
+#{$cssselector}:before{
+	border-bottom-color: $second-color;
+	left: 50%;
+	margin-left: -$big-arrow-size;
+}
+}
+
+}
+
+
+$arrow-size:5px;
+
+$cssselector : "#{$sel_mainclass}.tabs-top .tabs-menu > *.active";
+$direction : "bottom";
+@include makearrow($cssselector, $direction, $arrow-size, $border-width, $menu_bg, $border_color);
+$cssselector : "#{$sel_mainclass}.tabs-bottom .tabs-menu > *.active";
+$direction : "top";
+@include makearrow($cssselector, $direction, $arrow-size, $border-width, $color_shadow , $color_shadow);
+
+
+
+    /* --- skin-arrowbox */
+$menu_bg: #ccc;
+$menu_inactive_bg: #f7f7f7;
+$border-width:2px;
+$arrow-size:5px;
+$transition-property: all;
+$transition-duration: 0.3s;
+$transition-timing: ease-out;
+
+$cssselector : ".with-tooltip span:first-child";
+$sel_tooltip : ".dzstooltip";
+$sel_mainclass : ".dzs-tabs.skin-custombg";
+
+$menu_padding_hor: 20px;
+$menu_padding_ver: 20px;
+$border_color: #aaa;
+$border_outer_color:rgba(255,255,255,0.4);
+$color_gradient_fin:rgba(248,248,248,1);
+$color_shadow: #777;
+
+
+
+    #{$sel_mainclass} {
+    border:0;
+        position:relative;
+    }
+    #{$sel_mainclass}.iphone-size {
+        left:0%;
+    }
+    #{$sel_mainclass} .tabs-menu{
+    text-align:center;
+    }
+    #{$sel_mainclass} .tabs-menu > div{
+    border:0;
+        padding:20px;
+        border-radius:5px;
+        margin:10px 3px;
+        background: transparent;
+    }
+
+    #{$sel_mainclass} .tabs-menu > div.active{
+
+    }
+
+
+    #{$sel_mainclass} .tabs-content{
+    border:0;
+
+        text-align:center;
+        background-color: transparent;
+    }
+    #{$sel_mainclass} .tabs-content > .content-inner{
+        width:100%;
+        text-align: center;
+    }
+    #{$sel_mainclass} .tabs-content > .content-inner > *{
+        text-align: left;
+    }
+
+
+
+
+$sel_mainclass : ".dzs-tabs.skin-apps";
+    #{$sel_mainclass}{
+        border:0;
+        }
+
+    /*----reset default skin */
+    #{$sel_mainclass} .tabs-content{
+        border:0;
+        }
+    #{$sel_mainclass} .tabs-menu{
+        text-align: center;
+        }
+
+
+
+#{$sel_mainclass} .tabs-menu > div{
+    border:0;
+    }
+#{$sel_mainclass} .tabs-menu > div.active{
+    border:0;
+    }
+
+    /*----reset default skin END */
+
+
+    #{$sel_mainclass}{
+        border: 1px solid rgba(0,0,0,0.3);
+        border-radius:5px;
+        box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.1);
+        }
+    #{$sel_mainclass} .tabs-content{
+        -webkit-border-radius: 6px 6px 0 0;
+    -moz-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+        }
+
+
+    #{$sel_mainclass} .tabs-menu{
+        background: #fafafa;
+        text-align: center;
+    border-radius: 0 0 5px 5px;
+        border-top:1px solid rgba(0,0,0,0.1);
+
+        background: rgb(242,242,242);
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YyZjJmMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlYWVhZWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top, rgba(242,242,242,1) 0%, rgba(234,234,234,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(242,242,242,1)), color-stop(100%,rgba(234,234,234,1)));
+background: -webkit-linear-gradient(top, rgba(242,242,242,1) 0%,rgba(234,234,234,1) 100%);
+background: -o-linear-gradient(top, rgba(242,242,242,1) 0%,rgba(234,234,234,1) 100%);
+background: -ms-linear-gradient(top, rgba(242,242,242,1) 0%,rgba(234,234,234,1) 100%);
+background: linear-gradient(to bottom, rgba(242,242,242,1) 0%,rgba(234,234,234,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#eaeaea',GradientType=0 );
+        }
+
+    #{$sel_mainclass} .tabs-menu > div{
+        background: rgb(242,242,242);
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YyZjJmMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlYWVhZWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top, rgba(242,242,242,1) 0%, rgba(234,234,234,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(242,242,242,1)), color-stop(100%,rgba(234,234,234,1)));
+background: -webkit-linear-gradient(top, rgba(242,242,242,1) 0%,rgba(234,234,234,1) 100%);
+background: -o-linear-gradient(top, rgba(242,242,242,1) 0%,rgba(234,234,234,1) 100%);
+background: -ms-linear-gradient(top, rgba(242,242,242,1) 0%,rgba(234,234,234,1) 100%);
+background: linear-gradient(to bottom, rgba(242,242,242,1) 0%,rgba(234,234,234,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#eaeaea',GradientType=0 );
+    }
+
+
+        $borderstyle: 1px solid rgba(0,0,0,0.2);
+#{$sel_mainclass} .tabs-menu > div{
+    border:$borderstyle;
+    border-right:0px;
+    border-top:0px;
+    border-bottom:0px;
+    position: relative;
+    }
+#{$sel_mainclass} .tabs-menu > div:last-child{
+    border-right:$borderstyle!important;
+    }
+#{$sel_mainclass} .tabs-menu > div.active{
+    border:$borderstyle;
+    border-top:0px;
+    border-right:0px;
+    border-bottom:0px;
+
+    background: rgb(211,211,211);
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2QzZDNkMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlYWVhZWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top, rgba(211,211,211,1) 0%, rgba(234,234,234,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(211,211,211,1)), color-stop(100%,rgba(234,234,234,1)));
+background: -webkit-linear-gradient(top, rgba(211,211,211,1) 0%,rgba(234,234,234,1) 100%);
+background: -o-linear-gradient(top, rgba(211,211,211,1) 0%,rgba(234,234,234,1) 100%);
+background: -ms-linear-gradient(top, rgba(211,211,211,1) 0%,rgba(234,234,234,1) 100%);
+background: linear-gradient(to bottom, rgba(211,211,211,1) 0%,rgba(234,234,234,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3d3d3', endColorstr='#eaeaea',GradientType=0 );
+    }
+
+$cssselector : "#{$sel_mainclass} .tabs-menu > div.active";
+$direction : "bottom";
+    $arrow-size: 10px;
+    $border-width: 1px;
+    $main-color: #fff;
+    $border-color: rgba(0,0,0,0.2);
+
+@include makearrow($cssselector, $direction, $arrow-size, $border-width, $main-color , $border-color, 'on');
+
+
+
+
+
+
+
+
+
+$sel_mainclass : ".dzs-tabs.skin-clean";
+    #{$sel_mainclass}{
+        border:0;
+        }
+
+    /*----reset default skin */
+    #{$sel_mainclass} .tabs-content{
+        border:0;
+        }
+    #{$sel_mainclass} .tabs-menu{
+        }
+
+
+
+#{$sel_mainclass} .tabs-menu > div{
+    border:0;
+    background:transparent;
+  margin-left: 15px;
+    }
+#{$sel_mainclass} .tabs-menu > div.active{
+    border:0;
+    }
+
+    /*----reset default skin END */
+
+
+    #{$sel_mainclass} .tabs-menu{
+        border-bottom:1px solid rgba(0,0,0,0.2);
+        }
+#{$sel_mainclass} .tabs-menu > div{
+    border-bottom:3px solid transparent;
+    }
+#{$sel_mainclass} .tabs-menu > div.active{
+    border-bottom:3px solid #dd7373;
+    }
+
+
+.dzs-tabs.skin-clean{
+
+  .tabs-content{
+    background: transparent;
+  }
+}
+
+
+
+
+
+.dzs-tabs.menu-align-right{
+  .tabs-menu{
+    text-align: right;
+  }
+}
+
+
+
+
+    /* ----misc styling */
+
+    $textalign: center;
+$sel_mainclass : ".dzs-tabs";
+.big-title{
+        font-family: 'Quicksand', Helvetica, Arial, sans-serif;
+        font-size: 24px;
+        margin: 80px 0 30px;
+        text-align: $textalign;
+        line-height: 1em;
+        }
+.desc{
+        font-family: Helvetica, Arial, sans-serif;
+
+            font-size:14px;
+        text-align: $textalign;
+        }
+.big-price{
+        font-family: 'Quicksand', Helvetica, Arial, sans-serif;
+        font-size:32px;
+        color:#ce6f6f;
+        margin:30px;
+        text-align: $textalign;
+        }
+        .desc{
+            }
+        .fullwidth{
+            width:100%;
+            }
+
+            .button-addtocart-con{
+                text-align:center;
+                }
+.button-addtocart{
+        font-family: 'Quicksand', Helvetica, Arial, sans-serif;
+        font-size:24px;
+    background:rgba(0,0,0,0.5); padding:8px 15px; text-align:center;
+
+  cursor: pointer;
+  display: inline-block;
+  padding: 15px 18px;
+  text-decoration: none;
+color:#fafafa;
+border:1px solid rgba(0,0,0,0.5);
+background: #ce6f6f;
+margin:0 auto;
+}
+.button-addtocart a{
+  color: inherit;
+}
+.fullwidth80{
+    width:90%;
+    margin:5% auto;
+    display:block;
+    box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.2);
+
+    }

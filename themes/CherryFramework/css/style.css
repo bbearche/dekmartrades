@@ -22,7 +22,7 @@ a:focus { outline:none; }
 	margin:0 auto;
 	max-width:980px;
 	width:auto;
-	background:#fafafa;
+	background:#ffffff;
 }
 @media (min-width: 1200px) {
 	.cherry-fixed-layout .main-holder { max-width:1210px; }
@@ -255,8 +255,8 @@ a:focus > .sf-sub-indicator, a:hover > .sf-sub-indicator, a:active > .sf-sub-ind
 }
 .breadcrumb__t li.divider:after {
 	content:' / ';
-	color:#333333;
-	font:12px/18px Arial, Helvetica, sans-serif;
+	color:#333;
+	font:"Helvetica Neue", Helvetica, Arial, sans-serif/"Helvetica Neue", Helvetica, Arial, sans-serif "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 #sidebar { padding-top:40px; }
 #sidebar h3 { margin-bottom:20px; }
@@ -292,7 +292,7 @@ a:focus > .sf-sub-indicator, a:hover > .sf-sub-indicator, a:active > .sf-sub-ind
 	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-style:normal;
 	padding:12px 0 0;
-	font-size:10.2px;
+	font-size:"Helvetica Neue", Helvetica, Arial, sans-serif * 0.85;
 }
 .testimonial small span { display:inline; }
 .testimonial .testi-url, .testimonial .testi-email { font-style:normal; }
@@ -919,7 +919,7 @@ a:focus > .sf-sub-indicator, a:hover > .sf-sub-indicator, a:active > .sf-sub-ind
 .format-quote .post_meta { padding-top:25px; }
 .format-quote blockquote {
 	font-family:Georgia, "Times New Roman", Times, serif;
-	font-size:15px;
+	font-size:"Helvetica Neue", Helvetica, Arial, sans-serif * 1.25;
 	line-height:1.4em;
 	font-style:italic;
 	color:#999;
@@ -1251,14 +1251,14 @@ p.gravatar {
 #wp-calendar caption {
 	margin-bottom:5px;
 	padding:4px 0;
-	color:#0088cc;
+	color:#08c;
 	font-weight:bold;
 	font-size:16px;
 	text-align:center;
 }
 #wp-calendar thead th {
 	padding:7px 0;
-	color:#0088cc;
+	color:#08c;
 	text-align:center;
 	font-size:14px;
 }
@@ -1919,12 +1919,12 @@ nav.footer-nav ul li.current-menu-item a { text-decoration:underline; }
 	z-index:9999;
 	right:0;
 	left:0;
-	top:0;
+	bottom:0;
 	display:block;
 	padding:0;
 	margin:0;
 	color:#fff;
-	background:#4B749A;
+	background:rgba(0,0,0,0.7);
 	border:none;
 	text-shadow:none;
 	-webkit-border-radius:0;
@@ -2128,7 +2128,7 @@ figure.frame {
 	margin-bottom:7px;
 	width:50px;
 	height:50px;
-	background:#0088cc url(../images/up-arrow.png) no-repeat center center;
+	background:#08c url(../images/up-arrow.png) no-repeat center center;
 	-webkit-transition:1s;
 	-moz-transition:1s;
 	-o-transition:1s;
@@ -2766,8 +2766,8 @@ a.jp-restore-screen:hover span { background-position:-84px -84px; }
 .post_networks >ul >li span { margin-right:10px; }
 .spinner_32, .thumbnail, .accordion_loader, .google-map, .flexslider, .camera_loader, .preloader {
 	min-height:36px;
-	//background:url('../images/loading_32.gif') 50% 50% no-repeat;
-	//background:url('../images/loading_32.gif') 50% 50% no-repeat, url('../images/loading_bg_32.png') 50% 50% no-repeat;
+	background:url('../images/loading_32.gif') 50% 50% no-repeat;
+	background:url('../images/loading_32.gif') 50% 50% no-repeat, url('../images/loading_bg_32.png') 50% 50% no-repeat;
 }
 .spinner_16, div.ajax-loader, .thumbnail[rel^="prettyPhoto"] {
 	min-height:20px;
@@ -2805,7 +2805,7 @@ div.ajax-loader {
 .input-block-level {
 	display:block;
 	width:100%;
-	min-height:28px;
+	min-height:"Helvetica Neue", Helvetica, Arial, sans-serif + 10px;
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;

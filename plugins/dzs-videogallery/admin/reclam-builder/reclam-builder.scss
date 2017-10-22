@@ -1,0 +1,51 @@
+
+
+.dzsvg-reclam-builder{
+
+    position: relative;
+
+    .scrubbar-con{
+        position: relative;
+    }
+
+    $height: 10px;
+    .scrub-bg{
+        width: 100%;
+        height: $height+ 12px;
+
+        background-color: #444444;
+    }
+
+    .reclam-marker{
+        top:6px;
+
+        left:0;
+        position: absolute;
+        height: $height;
+        width: $height;
+
+
+        .icon{
+            position: absolute;
+            height: $height;
+            width: $height;
+
+            background-color: yellow;
+
+            transform: rotate(45deg);
+        }
+
+        .delete-btn{
+            position: absolute;
+            right: 5px;
+            top: 5px;
+
+            font-size: 15px;
+
+            color: #ffffff;
+            line-height: 1;
+
+            cursor: pointer;
+        }
+    }
+}

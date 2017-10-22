@@ -1,0 +1,333 @@
+<?php
+include_once('util.php');
+function stock_alert_embed_shortcode() {
+ob_start();
+?>
+<script src="https://use.fontawesome.com/bcafdb41f8.js"></script>
+<div class="alert-box">
+	<div id="alert-box-inner">
+        <h1 id="alert-stream-header" class="alert-stream-header centered">Alert Box <i title="Pop Out" style="cursor: pointer;" id="stock-alert-popout" class="fa fa-clone fa-1 fa-flip-horizontal" aria-hidden="true"></i></h1>
+        <table id="alert-table">
+		<div id="expire-dialog">
+		<thead id="alert-head">
+		    <tr>
+			<?php
+			if(stockalert_check_chat_admin()) {
+			?>
+			<th></th>
+			<th></th>
+			<?php
+			}
+			?>
+			<th>Position</th>
+			<th>Stock</th>
+			<th>Entry Price</th>
+			<th>Stop Loss</th>
+			<th>Sell Price</th>
+		    </tr>
+		</thead>
+                <tbody id="alert-streamer">
+                </tbody>
+        </table>
+	</div>
+	<?php
+	if(stockalert_check_chat_admin()) {
+	?>
+	<div id="alert_admin">
+	<form style="" id="alert-add-form" method="post">
+	    <input type="hidden" name="action" value="add">
+	    <select style="width:19%; height:39px; margin-bottom: 0px;" name="position">
+		<option value="Long">Long</option>
+		<option value="Short">Short</option>
+	    </select>
+	    <input style="width:12%" placeholder="Stock" type="text" name="stock">
+	    <input style="width:11%" placeholder="Entry" type="text" name="entry_price">
+	    <input style="width:10%" placeholder="Stop Loss" type="text" name="stop_loss">
+	    <input style="width:9%" placeholder="Exit" type="text" name="exit_price">
+	    <br>
+	    <!--<div style="text-align: center;" id="alert-submit-holder">
+	    <input style="margin-top: 10px;" type="submit" value="Add">
+	    </div>-->
+	</form>
+	</div>
+	<?php
+	}
+	?>
+</div>
+
+
+<script type="text/javascript">
+var alert_flash_timers_long = new Array();
+var alert_flash_timers_short = new Array();
+
+setInterval(function() {
+	$(alert_flash_timers_long.join()).effect('highlight', {color:"#669966"}, 2000)
+	$(alert_flash_timers_short.join()).effect('highlight', {color:"#ff1a1a"}, 2000)
+}, 2000);
+
+function update_now() {
+    jQuery.ajax({
+        url: "/wp-content/plugins/alert-box/api.php?action=list",
+        type: "GET",
+        success: function(data) {
+	    jQuery("#alert-streamer").empty();
+	alert_flash_timers_long = []
+	alert_flash_timers_short = []
+	    jQuery.each(data, function(k, v) {
+		add_alert(v);
+	    });
+        },
+        dataType: "json"
+    })
+
+}
+function add_alert_post() {
+	    $.ajax({
+		   type: "POST",
+		   url: "http://dekmartrades.com/wp-content/plugins/alert-box/api.php",
+		   data: $("#alert-add-form").serialize(),
+		   success: function(data)
+		   {
+		    jQuery.ajax({
+			url: "/wp-content/plugins/alert-box/api.php?action=list",
+			type: "GET",
+			success: function(data) {
+			    jQuery("#alert-streamer").empty();
+			    jQuery.each(data, function(k, v) {
+				add_alert(v);
+				jQuery("#alert-add-form")[0].reset()
+			    });
+			},
+			dataType: "json"});
+		   }
+		 });
+}
+
+jQuery("#alert-add-form").keypress(function(event) {
+	if (event.which == 13) {
+	    add_alert_post();
+	    return false;
+}
+});
+
+function expire_alert_dialog(id) {
+    var attr = $("#alert-box-"+id).attr('expired');
+    if (typeof attr !== typeof undefined && attr !== false) {
+	remove_alert(id);
+	return;
+    }
+    $("#expire-dialog").dialog({
+	appendTo: "#alert-stream-header",
+	position: { my: "center", at: "center", of: "#alert-table" },
+	draggable: false,
+	resizable: false,
+	title: "Expire alert",
+	buttons: [
+	    {
+ 	    	text: "Win",
+		click: function() {
+		    expire_alert(id, 1);
+		    $(this).dialog("close");
+		}
+ 	    },
+	    {
+ 	    	text: "Loss",
+		click: function() {
+		    expire_alert(id, 0);
+		    $(this).dialog("close");
+		}
+ 	    }
+	]
+    });
+}
+function expire_alert(id, verdict) {
+    stop_highlight_alert(id);
+    jQuery.ajax({
+        url: "/wp-content/plugins/alert-box/api.php",
+        type: "POST",
+	data: {'action': 'expire', 'id': id, 'verdict': verdict},
+        success: function(data) {
+		update_now();
+        }
+    })
+
+}
+function remove_alert(id) {
+    stop_highlight_alert(id);
+    jQuery.ajax({
+        url: "/wp-content/plugins/alert-box/api.php",
+        type: "POST",
+	data: {'action': 'remove', 'id': id},
+        success: function(data) {
+		update_now();
+        }
+    })
+
+}
+
+function start_highlight_alert(id) {
+    jQuery.ajax({
+        url: "/wp-content/plugins/alert-box/api.php",
+        type: "POST",
+	data: {'action': 'highlight', 'id': id},
+        success: function(data) {
+		update_now();
+        }
+    })
+
+}
+function stop_highlight_alert(id) {
+    jQuery.ajax({
+        url: "/wp-content/plugins/alert-box/api.php",
+        type: "POST",
+	data: {'action': 'stop_highlight', 'id': id},
+        success: function(data) {
+		update_now();
+        }
+    })
+
+}
+function end_highlight_alert(id) {
+	var name = "#alert-box-"+id
+	var index = alert_flash_timers_long.indexOf(name)
+	if (index != -1) {
+		alert_flash_timers_long.splice(index, 1);
+	}
+	index = alert_flash_timers_short.indexOf(name)
+	if (index != -1) {
+		alert_flash_timers_short.splice(index, 1);
+	}
+}
+function highlight_alert(alert) {
+	id = alert.attr('alert-id');
+	name = '#' + alert.attr('id')
+	position = alert.children('.alert_position').text()
+
+	if (position == "Long") {
+	    if ($.inArray(name, alert_flash_timers_long) != -1) {
+		stop_highlight_alert(id)
+	    } else {
+		start_highlight_alert(id);
+		alert_flash_timers_long.push('#alert-box-'+id);
+	    }
+	} else if (position == "Short") {
+	    if ($.inArray(name, alert_flash_timers_short) != -1) {
+		stop_highlight_alert(id)
+	    } else {
+		start_highlight_alert(id);
+		alert_flash_timers_short.push('#alert-box-'+id);
+	    }
+	}
+}
+
+
+jQuery('#alert-streamer').on('click', '.alert-remove-button', function(evt) {
+	expire_alert_dialog(jQuery(this).parent().parent().attr('alert-id'))
+});
+jQuery('#alert-streamer').on('click', '.alert-highlight-button', function(evt) {
+	highlight_alert(jQuery(this).parent().parent())
+});
+
+var alert_audio = document.createElement('audio');
+alert_audio.setAttribute('src', '/wp-content/plugins/alert-box/chime.wav');
+alert_audio.volume = 0.5;
+
+
+var initial_alerts = true;
+var previous_alerts = []
+var current_alerts = []
+
+function add_alert(v) {
+	<?php
+	if(stockalert_check_chat_admin()) {
+	?>
+	jQuery("#alert-streamer").append(
+		"<tr alert-id='" + v['id']  +"' class='alert-item' id='alert-box-" + v['id'] + "'>" +
+			"<th class='alert-remove'><span class='alert-remove-button' style='cursor: pointer;'>&#10006;</span></th>" +
+			"<th class='alert-highlight'><span class='alert-highlight-button' style='cursor: pointer;'>&#9788;</span></th>" +
+			"<th class='alert_position'>" + v['position']  + "</th>" +  
+			"<th class='alert_stock'><a target='_blank' href='https://finance.yahoo.com/q?s=" + v['stock'] + "'>$" + v['stock']  + "</a></th>" +  
+			"<th class='alert_entry_price'>$" + Number(v['entry_price']).toFixed(2)  + "</th>" +
+			"<th class='alert_stop_loss'>$" + Number(v['stop_loss']).toFixed(2)  + "</th>" +
+			"<th class='alert_exit_price'>$" + Number(v['exit_price']).toFixed(2)  + "</th>" +
+		"</tr>"
+	);
+	
+	<?php
+	} else {
+	?>
+	jQuery("#alert-streamer").append(
+		"<tr class='alert-item' id='alert-box-" + v['id'] + "'>" +
+			"<th class='alert_position'>" + v['position']  + "</th>" +  
+			"<th class='alert_stock'><a target='_blank' href='https://finance.yahoo.com/q?s=" + v['stock'] + "'>$" + v['stock']  + "</a></th>" +  
+			"<th class='alert_entry_price'>$" + Number(v['entry_price']).toFixed(2)  + "</th>" +
+			"<th class='alert_stop_loss'>$" + Number(v['stop_loss']).toFixed(2)  + "</th>" +
+			"<th class='alert_exit_price'>$" + Number(v['exit_price']).toFixed(2)  + "</th>" +
+		"</tr>"
+	);
+	<?php
+	}
+	?>
+	current_alerts.push(v['id']);
+	if (v['highlight'] == 1) {
+	    if (v['position'] == 'Long') {
+		alert_flash_timers_long.push('#alert-box-'+v['id'])
+	    } else if (v['position'] == 'Short') {
+		alert_flash_timers_short.push('#alert-box-'+v['id'])
+	    }
+	}
+	if (v['expired'] == 1) {
+	    var alert = $('#alert-box-' + v['id']);
+	    alert.attr('expired', '1');
+	    alert.fadeTo(0, 0.2);
+	    alert.find("a").removeAttr('href');
+	    if (v['verdict'] == 0) {
+	        alert.children(".alert_position").toggleClass("loss");
+	    } else if(v['verdict'] == 1) {
+	        alert.children(".alert_position").toggleClass("win");
+	    }
+	}
+	var dE = jQuery('#alert-box-inner');
+	dE.scrollTop(dE.prop('scrollHeight'));
+	if (!initial_alerts && $.inArray(v['id'], previous_alerts) == -1) {
+	//if (!initial_alerts) {
+	    alert_audio.play();
+	}
+
+}
+var poll = function alert_box_poll() {
+    jQuery.ajax({
+        url: "/wp-content/plugins/alert-box/api.php?action=list",
+        type: "GET",
+        success: function(data) {
+	    jQuery("#alert-streamer").empty();
+	    previous_alerts = current_alerts;
+	    current_alerts = [];
+	    alert_flash_timers_long = [];
+	    alert_flash_timers_short = [];
+
+	    jQuery.each(data, function(k, v) {
+		add_alert(v);
+	    });
+	    if (initial_alerts) {
+		previous_alerts = current_alerts;
+		initial_alerts = false;
+	    }
+        },
+        dataType: "json",
+       // complete: setTimeout(function() {alert_box_poll()}, 20000),
+        timeout: 20000
+    })
+};
+poll();
+poll();
+setInterval(function(){ poll(); }, 20000);
+</script>
+	
+
+<?php
+$sc = ob_get_contents();
+ob_end_clean();
+return $sc;
+
+}

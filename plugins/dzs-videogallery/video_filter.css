@@ -1,0 +1,22 @@
+#video_filter {
+    display: table;
+    margin: 0 auto;
+}
+.btn {
+    margin: 5px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    padding: 6px 12px 5px 12px;
+}
+.videogallery.mode-wall .sliderCon.layout-4-cols-10-margin {
+	/*display: flex;*/
+}
+.videogallery.mode-wall .sliderCon.layout-4-cols-10-margin .vplayer-tobe {
+
+	position: inherit !important;
+	top: inherit !important;
+	left: inherit !important; 
+}
+.videogallery.mode-wall .sliderCon.layout-4-cols-10-margin {
+	height: 100% !important;
+}

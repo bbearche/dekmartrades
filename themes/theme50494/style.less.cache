@@ -1,4 +1,4 @@
-a:4:{s:4:"root";s:77:"/var/www/dekmartrades.com/public_html/wp-content/themes/theme50494/style.less";s:8:"compiled";s:71041:"@import url("../CherryFramework/style.css");
+a:4:{s:4:"root";s:100:"C:\Users\Brock\Desktop\Projects\SideJobs\dekmar\dekmartrades/wp-content/themes/theme50494/style.less";s:8:"compiled";s:71041:"@import url("../CherryFramework/style.css");
 @import url(//fonts.googleapis.com/css?family=Istok+Web:400,400italic,700,700italic);
 @import url(//fonts.googleapis.com/css?family=Inder);
 body { background:#3b4348; }
@@ -3151,4 +3151,4 @@ html.ie8 .parallax-slider .controlBtn.parallaxNextBtn { margin-right:-450px; }
 	z-index:99;
 	background:url(images/spinner.gif) 50% 50% no-repeat #e22004;
 }
-";s:5:"files";a:4:{s:77:"/var/www/dekmartrades.com/public_html/wp-content/themes/theme50494/style.less";i:1440591082;s:96:"/var/www/dekmartrades.com/public_html/wp-content/themes/theme50494/bootstrap/less/variables.less";i:1497379900;s:93:"/var/www/dekmartrades.com/public_html/wp-content/themes/theme50494/bootstrap/less/mixins.less";i:1440591038;s:87:"/var/www/dekmartrades.com/public_html/wp-content/themes/theme50494/parallax-slider.less";i:1440591078;}s:7:"updated";i:1497379901;}
+";s:5:"files";a:4:{s:100:"C:\Users\Brock\Desktop\Projects\SideJobs\dekmar\dekmartrades\wp-content\themes\theme50494\style.less";i:1508688138;s:119:"C:\Users\Brock\Desktop\Projects\SideJobs\dekmar\dekmartrades\wp-content\themes\theme50494\bootstrap\less\variables.less";i:1508688141;s:116:"C:\Users\Brock\Desktop\Projects\SideJobs\dekmar\dekmartrades\wp-content\themes\theme50494\bootstrap\less\mixins.less";i:1508688143;s:110:"C:\Users\Brock\Desktop\Projects\SideJobs\dekmar\dekmartrades\wp-content\themes\theme50494\parallax-slider.less";i:1508688138;}s:7:"updated";i:1508694484;}

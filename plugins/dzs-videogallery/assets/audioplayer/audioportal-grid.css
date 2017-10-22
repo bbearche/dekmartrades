@@ -1,0 +1,239 @@
+/* ------- Page Builder Columns ------- */
+.dzspb_lay_row, .dzspb_layb_layout {
+  position: relative;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-top: 15px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+.dzspb_lay_row:after, .dzspb_layb_layout:after {
+  display: block;
+  content: " ";
+  clear: both; }
+
+.dzspb_lay_row *, .dzspb_layb_layout * {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+.dzspb_layb_one_full {
+  padding-right: 15px;
+  padding-left: 15px; }
+
+.dzspb_layb_one_half {
+  width: 50%; }
+
+.dzspb_layb_one_third {
+  width: 33.3333%; }
+
+.dzspb_layb_two_third {
+  width: 66.6666%; }
+
+.dzspb_layb_one_fourth {
+  width: 25%; }
+
+.dzspb_layb_three_fourth {
+  width: 75%; }
+
+.dzspb_layb_one_fifth {
+  width: 20%; }
+
+.dzspb_layb_two_fifth {
+  width: 40%; }
+
+.dzspb_layb_three_fifth {
+  width: 60%; }
+
+.dzspb_layb_four_fifth {
+  width: 80%; }
+
+.dzspb_layb_one_sixth {
+  width: 16.6%; }
+
+.dzspb_layb_five_sixth {
+  width: 83.3%; }
+
+.dzspb_layb_one_half, .dzspb_layb_one_third, .dzspb_layb_two_third, .dzspb_layb_three_fourth, .dzspb_layb_one_fourth, .dzspb_layb_one_fifth, .dzspb_layb_two_fifth, .dzspb_layb_three_fifth, .dzspb_layb_four_fifth, .dzspb_layb_one_sixth, .dzspb_layb_five_sixth {
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+  float: left; }
+
+.clearboth {
+  clear: both;
+  display: block;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  width: 100%; }
+
+.dzspb_layb_layout:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+hr.dzspb-separator {
+  width: 100%;
+  height: 1px;
+  display: block;
+  line-height: 1.5;
+  background-color: rgba(0, 0, 0, 0.3); }
+
+@media only screen and (max-width: 480px) {
+  .dzspb_layb_one_half, .dzspb_layb_one_third, .dzspb_layb_two_third, .dzspb_layb_three_fourth, .dzspb_layb_one_fourth, .dzspb_layb_one_fifth, .dzspb_layb_two_fifth, .dzspb_layb_three_fifth, .dzspb_layb_four_fifth, .dzspb_layb_one_sixth, .dzspb_layb_five_sixth {
+    position: relative;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: none;
+    display: block; }
+
+  .dzspb_lay_row {
+    margin-top: 10px; } }
+.label-artist {
+  font-size: 21px;
+  font-family: "Open Sans", arial, serif;
+  font-weight: bold;
+  margin-top: 15px; }
+
+.label-song {
+  font-size: 16px;
+  font-family: "Open Sans", arial, serif;
+  margin-top: 15px; }
+
+.dzsap-grid-meta-buy {
+  margin-top: 15px; }
+
+.dzsap-grid-style2-item {
+  position: relative;
+  overflow: hidden; }
+  .dzsap-grid-style2-item > img:first-child {
+    width: 100%;
+    display: block; }
+  .dzsap-grid-style2-item > .centered-content-con {
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    -moz-transition-property: all;
+    -moz-transition-duration: 0.3s;
+    -moz-transition-timing-function: ease-out;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    -o-transition-property: all;
+    -o-transition-duration: 0.3s;
+    -o-transition-timing-function: ease-out;
+    -ms-transition-property: all;
+    -ms-transition-duration: 0.3s;
+    -ms-transition-timing-function: ease-out;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 30, 30, 0);
+    opacity: 0;
+    transform: scale(1.2); }
+    .dzsap-grid-style2-item > .centered-content-con > .centered-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+
+.dzsap-grid-style2-item:hover > .centered-content-con {
+  background-color: rgba(30, 30, 30, 0.45);
+  opacity: 1;
+  transform: scale(1); }
+
+/* wordpress grid styling */
+.dzsap-woo-grid.style-under .grid-object {
+  margin-bottom: 10px; }
+
+.dzsap-woo-grid.style-style1, .dzsap-woo-grid.style-style2 {
+  margin-left: -15px;
+  margin-right: -15px; }
+  .dzsap-woo-grid.style-style1 .grid-object, .dzsap-woo-grid.style-style2 .grid-object {
+    padding: 0 15px 15px 15px;
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    width: 33%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
+.dzsap-woo-grid.style-style1:after, .dzsap-woo-grid.style-style2:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+@media (max-width: 650px) {
+  .dzsap-woo-grid.style-style1 .grid-object, .dzsap-woo-grid.style-style2 .grid-object {
+    width: 100%; } }
+.dzsap-woo-grid.style-style3 ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-bottom: 5px;
+  margin-bottom: 10px; }
+  .dzsap-woo-grid.style-style3 ul .column-for-player {
+    float: left;
+    width: 40px;
+    margin-right: 10px; }
+  .dzsap-woo-grid.style-style3 ul .column-for-buy {
+    float: right;
+    margin-left: 10px;
+    width: 75px; }
+  .dzsap-woo-grid.style-style3 ul .column-for-title {
+    overflow: hidden; }
+.dzsap-woo-grid.style-style3 ul:after {
+  display: block;
+  clear: both;
+  content: ""; }
+.dzsap-woo-grid.style-style3 .dzsap-header-tr {
+  font-weight: bold;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.3); }
+.dzsap-woo-grid.style-style3 .dzsap-product-tr .column-for-title {
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 1;
+  position: relative;
+  top: 9px; }
+.dzsap-woo-grid.style-style3 a.grid-buy-btn {
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  background-color: #76705d;
+  color: #ffffff;
+  border-radius: 5px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 10px; }
+  .dzsap-woo-grid.style-style3 a.grid-buy-btn .btn-inner {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+  .dzsap-woo-grid.style-style3 a.grid-buy-btn i {
+    opacity: 0.75; }
+
+/*# sourceMappingURL=audioportal-grid.css.map */
